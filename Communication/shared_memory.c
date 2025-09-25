@@ -31,24 +31,24 @@ int main(int argc, char *argv[]){
     pid = fork();
     if(pid == 0){
         strcpy(share, "hello, i am child process");
-        printf("子进程%d写入数据: %s\n", getpid(), share);
-        // 解除映射
+        printf("子进程%d写入数据\n", getpid());
+        // 解除子进程映射
         int ret_1 = munmap(share, 100);
         if(ret_1 == -1){
-            perror("解除映射失败");
+            perror("子进程解除映射失败");
             _exit(EXIT_FAILURE);
         }
     }else if(pid > 0){
         // 父进程等待1秒
         sleep(1);
         strcpy(share, "hello, i am parent process");
-        printf("父进程%d写入数据: %s\n", getpid(), share);
+        printf("父进程%d读到子进程%d写的数据: %s\n" , getpid(), pid,share);
         // 等待子进程结束
         wait(NULL);
-        // 解除映射
+        // 解除父进程映射
         int ret_2 = munmap(share, 100);
         if(ret_2 == -1){
-            perror("解除映射失败");
+            perror("父进程解除映射失败");
             exit(EXIT_FAILURE);
         }
         // 删除共享内存

@@ -5,12 +5,7 @@
 #include <stdlib.h> 
 int main(int argc, char *argv[])
 {
-    char *pipe_path = "/tmp/myfifo3";
-    
-    // if (mkfifo( pipe_path, 0664)!= 0){
-    //     perror("mkfifo");
-    //     exit(EXIT_FAILURE);
-    // }
+    char *pipe_path = "/tmp/myfifo";
 
     // 对有名管道的特殊文件 创建fd
     int fd = open(pipe_path, O_RDONLY);

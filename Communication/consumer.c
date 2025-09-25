@@ -25,6 +25,7 @@ int main() {
     char readBuf[100];
     struct timespec time_info;
     while(1){
+        // 清空读缓冲区
         memset(readBuf, 0, sizeof(readBuf));
 
         // 获取1天后的time_spec结构对象，目的是测试期间使得消费者一直等待生产者发送的数据
