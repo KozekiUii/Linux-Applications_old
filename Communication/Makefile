@@ -1,5 +1,8 @@
 CC=gcc
+<<<<<<< HEAD
 .PHONY: named_fifo named_fifo_clean p_c_mq pc_mq_clean
+=======
+>>>>>>> 51c1a7db3fe516fa9f67d89778d0e7dfae4de73c
 
 pipe_test:pipe_test.c
 	-$(CC) -o $@ $^
@@ -58,6 +61,7 @@ shared_memory:shared_memory.c
 father_son_mq_test:father_son_mq_test.c
 	-$(CC) -o $@ $^
 	-./$@
+<<<<<<< HEAD
 	-rm ./$@
 
 # producer:producer.c
@@ -75,3 +79,6 @@ p_c_mq:producer consumer
 
 pc_mq_clean:
 	-rm ./producer ./consumer
+=======
+	-rm ./$@
+>>>>>>> 51c1a7db3fe516fa9f67d89778d0e7dfae4de73c

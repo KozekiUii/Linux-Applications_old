@@ -8,8 +8,13 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
+<<<<<<< HEAD
       "cwd": "/home/komorebi/Documents/learnGit/Linux-Applications/Thread",
       "program": "/home/komorebi/Documents/learnGit/Linux-Applications/Thread/build/Debug/outDebug",
+=======
+      "cwd": "/home/komorebi/Documents/Workspace/shangguigu/Communication",
+      "program": "/home/komorebi/Documents/Workspace/shangguigu/Communication/build/Debug/outDebug",
+>>>>>>> 51c1a7db3fe516fa9f67d89778d0e7dfae4de73c
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

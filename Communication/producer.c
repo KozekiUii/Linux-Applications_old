@@ -3,6 +3,10 @@
 #include <mqueue.h>
 #include <stdio.h>
 #include <unistd.h>
+<<<<<<< HEAD
+=======
+#include <stdlib.h>
+>>>>>>> 51c1a7db3fe516fa9f67d89778d0e7dfae4de73c
 #include <string.h>
 
 int main(){
@@ -27,6 +31,7 @@ int main(){
     while(1){
         // 清空写缓冲区
         memset(write_buf, 0, sizeof(write_buf));
+<<<<<<< HEAD
 
         // 从命令行标准输入获取数据
         ssize_t read_count = read(STDIN_FILENO, write_buf, sizeof(write_buf));
@@ -63,4 +68,7 @@ int main(){
     // mq_unlink只应调用一次，选择在消费者中完成此操作
 
     return 0;
+=======
+    }
+>>>>>>> 51c1a7db3fe516fa9f67d89778d0e7dfae4de73c
 }
