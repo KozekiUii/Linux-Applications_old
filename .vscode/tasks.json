@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "make",
+			"targetName": "pthread_cancel",
+			"makeFileRelativePath": "Thread/Makefile",
+			"problemMatcher": [],
+			"label": "make: pthread_cancel",
+			"detail": "./Thread/Makefile",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
