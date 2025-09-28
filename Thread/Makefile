@@ -9,4 +9,58 @@ terminate_test:terminate_test.c
 	-$(CC) -o $@ $^
 	-./$@
 	-rm ./$@
-	
+
+pthread_detach_test:pthread_detach_test.c
+	-$(CC) -o $@ $^
+	-./$@
+# 	-rm ./$@
+
+pthread_cancel:pthread_cancel.c
+	-$(CC) -g -pthread -o $@ $^
+	-./$@
+	-rm ./$@
+
+pthread_cancel_async_test:pthread_cancel_async_test.c
+	-$(CC) -o $@ $^ -pthread
+	-./$@
+	-rm ./$@
+
+pthread_cancel_disable_test:pthread_cancel_disable_test.c
+	-$(CC) -g -o $@ $^ -pthread
+	-./$@
+# 	-rm ./$@
+
+race_condition_test:race_condition_test.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+mutex_test:mutex_test.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+rwlock_test_writer_unlock:rwlock_test_writer_unlock.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+rwlock_test:rwlock_test.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+rwlock_rw_alternate_test:rwlock_rw_alternate_test.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+rwlock_write_hungry:rwlock_write_hungry.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+rwlock_write_hungry_solved:rwlock_write_hungry_solved.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
