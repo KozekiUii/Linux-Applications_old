@@ -28,7 +28,6 @@ pthread_cancel_async_test:pthread_cancel_async_test.c
 pthread_cancel_disable_test:pthread_cancel_disable_test.c
 	-$(CC) -g -o $@ $^ -pthread
 	-./$@
-<<<<<<< HEAD
 # 	-rm ./$@
 
 race_condition_test:race_condition_test.c
