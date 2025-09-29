@@ -1,5 +1,4 @@
 #include <pthread.h>
-#include <complex.h>
 #include <stdio.h>
 #include <unistd.h>
 
