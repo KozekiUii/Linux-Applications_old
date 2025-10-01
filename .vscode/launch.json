@@ -1,8 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
-  
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -10,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/komorebi/Documents/learnGit/Linux-Applications/Thread",
-      "program": "/home/komorebi/Documents/learnGit/Linux-Applications/Thread/build/Debug/outDebug",
+      "cwd": "/home/komorebi/Documents/Workspace/Linux-Applications_old/Communication",
+      "program": "/home/komorebi/Documents/Workspace/Linux-Applications_old/Communication/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
