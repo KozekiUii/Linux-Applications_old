@@ -94,3 +94,8 @@ unnamed_sem_count_thread:unnamed_sem_count_thread.c
 	-$(CC) -o $@ $^
 	-./$@
 	-rm ./$@
+
+unnamed_sem_count_process:unnamed_sem_count_process.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
