@@ -18,8 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ea9b5d-021b-44fe-bc88-9021c0ba06e5" name="更改" comment="```&#10;fix(vscode): 更新调试配置中的工作目录和程序路径&#10;&#10;将 `.vscode/launch.json` 中的 `cwd` 和 `program` 路径更新为新的项目结构，确保调试功能正常运行。&#10;&#10;feat(communication): 清理 Makefile 中的冲突标记并优化构建规则&#10;&#10;移除了 `Communication/Makefile` 中残留的合并冲突标记（&lt;&lt;&lt;&lt;&lt;&lt;&lt;、=======、&gt;&gt;&gt;&gt;&gt;&gt;&gt;），并删除了冗余或错误的编译命令，使 Makefile 更加清晰且可维护。&#10;&#10;fix(communication): 解决 shared_memory.c 中的代码冲突并统一逻辑&#10;&#10;清理 `shared_memory.c` 文件中因分支合并产生的冲突内容，保留正确的行为逻辑：子进程写入数据后解除映射，父进程读取数据后再解除映射，并删除共享内存。同时规范代码格式，提升可读性。&#10;&#10;docs(thread): 为 condition_var.c 添加详细注释和文档说明&#10;&#10;为 `Thread/condition_var.c` 添加文件头注释和函数注释，明确条件变量与互斥锁的使用方式，解释生产者与消费者模型的工作机制及注意事项，提高代码可读性和可维护性。&#10;```">
-      <change afterPath="$PROJECT_DIR$/Thread/unnamed_sem_count_process.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thread/named_sem_bin.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thread/named_sem_count.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thread/thread_pool_test.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Thread/-g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Thread/-pthread" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Thread/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Thread/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,114 +37,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "KozekiUii"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KozekiUii&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:KozekiUii/Linux-Applications_old.git",
-    "accountId": "060a3f11-53f4-455d-8664-60cd13bfea83"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:KozekiUii/Linux-Applications_old.git&quot;,
+    &quot;accountId&quot;: &quot;060a3f11-53f4-455d-8664-60cd13bfea83&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -263,11 +172,17 @@
   "keyToString": {
     "C/C++ 文件.consumer.c.executor": "Run",
     "C/C++ 文件.execve_test.c.executor": "Debug",
+    "C/C++ 文件.named_sem_bin.c.executor": "Run",
+    "C/C++ 文件.named_sem_count.c.executor": "Run",
     "C/C++ 文件.producer.c.executor": "Run",
     "C/C++ 文件.pthread_cancel.c.executor": "Debug",
     "C/C++ 文件.unnamed_sem_bin_process.c.executor": "Run",
     "C/C++ 文件.unnamed_sem_count_process.c.executor": "Run",
     "C/C++ 文件.unnamed_sem_count_thread.c.executor": "Run",
+    "Makefile 目标.named_sem_bin.c.executor": "Run",
+    "Makefile 目标.named_sem_bin.executor": "Run",
+    "Makefile 目标.named_sem_count.executor": "Run",
+    "Makefile 目标.thread_pool_test.executor": "Run",
     "Makefile 目标.unnamed_sem_count_process.executor": "Run",
     "Makefile 目标.unnamed_sem_count_thread.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -280,13 +195,13 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/komorebi/Documents/Workspace/Linux-Applications_old",
+    "last_opened_file_path": "/home/komorebi/Documents/Workspace/Linux-Applications_old/Thread",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "httpClient",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -296,44 +211,49 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="C/C++ 文件.unnamed_sem_count_thread.c">
-    <configuration name="unnamed_sem_bin_process.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Linux-Applications_old" TARGET_NAME="unnamed_sem_bin_process.c" CONFIG_NAME="unnamed_sem_bin_process.c">
-      <option name="sourceFile" value="Thread/unnamed_sem_bin_process.c" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Thread" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile 目标.thread_pool_test">
+    <configuration name="named_sem_bin.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Linux-Applications_old" TARGET_NAME="named_sem_bin.c" CONFIG_NAME="named_sem_bin.c">
+      <option name="sourceFile" value="Thread/named_sem_bin.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="unnamed_sem_count_process.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Linux-Applications_old" TARGET_NAME="unnamed_sem_count_process.c" CONFIG_NAME="unnamed_sem_count_process.c">
-      <option name="sourceFile" value="Thread/unnamed_sem_count_process.c" />
+    <configuration name="named_sem_count.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Linux-Applications_old" TARGET_NAME="named_sem_count.c" CONFIG_NAME="named_sem_count.c">
+      <option name="sourceFile" value="Thread/named_sem_count.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="unnamed_sem_count_thread.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Linux-Applications_old" TARGET_NAME="unnamed_sem_count_thread.c" CONFIG_NAME="unnamed_sem_count_thread.c">
-      <option name="sourceFile" value="Thread/unnamed_sem_count_thread.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="unnamed_sem_count_process" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Thread/Makefile" target="unnamed_sem_count_process" workingDirectory="" arguments="">
+    <configuration name="named_sem_bin" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Thread/Makefile" target="named_sem_bin" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="unnamed_sem_count_thread" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Thread/Makefile" target="unnamed_sem_count_thread" workingDirectory="" arguments="">
+    <configuration name="named_sem_count" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Thread/Makefile" target="named_sem_count" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="thread_pool_test" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Thread/Makefile" target="thread_pool_test" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="C/C++ 文件.unnamed_sem_count_thread.c" />
-        <item itemvalue="Makefile 目标.unnamed_sem_count_process" />
-        <item itemvalue="C/C++ 文件.unnamed_sem_count_process.c" />
-        <item itemvalue="Makefile 目标.unnamed_sem_count_thread" />
-        <item itemvalue="C/C++ 文件.unnamed_sem_bin_process.c" />
+        <item itemvalue="Makefile 目标.thread_pool_test" />
+        <item itemvalue="Makefile 目标.named_sem_count" />
+        <item itemvalue="Makefile 目标.named_sem_bin" />
+        <item itemvalue="C/C++ 文件.named_sem_bin.c" />
+        <item itemvalue="C/C++ 文件.named_sem_count.c" />
       </list>
     </recent_temporary>
   </component>
@@ -346,7 +266,9 @@
       <updated>1758638031041</updated>
       <workItem from="1758638032499" duration="403000" />
       <workItem from="1758853530759" duration="568000" />
-      <workItem from="1759311443815" duration="9798000" />
+      <workItem from="1759311443815" duration="10163000" />
+      <workItem from="1759382890815" duration="11769000" />
+      <workItem from="1759400698539" duration="3001000" />
     </task>
     <task id="LOCAL-00001" summary="```&#10;fix(vscode): 更新调试配置中的工作目录和程序路径&#10;&#10;将 `.vscode/launch.json` 中的 `cwd` 和 `program` 路径更新为新的项目结构，确保调试功能正常运行。&#10;&#10;feat(communication): 清理 Makefile 中的冲突标记并优化构建规则&#10;&#10;移除了 `Communication/Makefile` 中残留的合并冲突标记（&lt;&lt;&lt;&lt;&lt;&lt;&lt;、=======、&gt;&gt;&gt;&gt;&gt;&gt;&gt;），并删除了冗余或错误的编译命令，使 Makefile 更加清晰且可维护。&#10;&#10;fix(communication): 解决 shared_memory.c 中的代码冲突并统一逻辑&#10;&#10;清理 `shared_memory.c` 文件中因分支合并产生的冲突内容，保留正确的行为逻辑：子进程写入数据后解除映射，父进程读取数据后再解除映射，并删除共享内存。同时规范代码格式，提升可读性。&#10;&#10;docs(thread): 为 condition_var.c 添加详细注释和文档说明&#10;&#10;为 `Thread/condition_var.c` 添加文件头注释和函数注释，明确条件变量与互斥锁的使用方式，解释生产者与消费者模型的工作机制及注意事项，提高代码可读性和可维护性。&#10;```">
       <option name="closed" value="true" />
@@ -404,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759327211930</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="```&#10;fix(vscode): 更新调试配置中的工作目录和程序路径&#10;&#10;将 `.vscode/launch.json` 中的 `cwd` 和 `program` 路径更新为新的项目结构，确保调试功能正常运行。&#10;&#10;feat(communication): 清理 Makefile 中的冲突标记并优化构建规则&#10;&#10;移除了 `Communication/Makefile` 中残留的合并冲突标记（&lt;&lt;&lt;&lt;&lt;&lt;&lt;、=======、&gt;&gt;&gt;&gt;&gt;&gt;&gt;），并删除了冗余或错误的编译命令，使 Makefile 更加清晰且可维护。&#10;&#10;fix(communication): 解决 shared_memory.c 中的代码冲突并统一逻辑&#10;&#10;清理 `shared_memory.c` 文件中因分支合并产生的冲突内容，保留正确的行为逻辑：子进程写入数据后解除映射，父进程读取数据后再解除映射，并删除共享内存。同时规范代码格式，提升可读性。&#10;&#10;docs(thread): 为 condition_var.c 添加详细注释和文档说明&#10;&#10;为 `Thread/condition_var.c` 添加文件头注释和函数注释，明确条件变量与互斥锁的使用方式，解释生产者与消费者模型的工作机制及注意事项，提高代码可读性和可维护性。&#10;```">
+      <option name="closed" value="true" />
+      <created>1759327763157</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759327763157</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,15 +390,22 @@
           <line>6</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Thread/named_sem_bin.c</url>
+          <line>10</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Thread/named_sem_bin.c</url>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Thread/named_sem_count.c</url>
+          <line>11</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CppFileRunConfiguration">
-        <watch expression="@ ALREADY PREPROCESSED @shared_num" />
-        <watch expression="@ ALREADY PREPROCESSED @full" />
-        <watch expression="@ ALREADY PREPROCESSED @empty" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
